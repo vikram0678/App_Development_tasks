@@ -17,7 +17,6 @@ class chooselocationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         val locationList= arrayOf("hyd","banglore","chennai","mumbai ")
-//        val locationList= arrayOf("hyd","banglore","chennai")
         val adapter=ArrayAdapter(this, android.R.layout.simple_list_item_1,locationList)
         val autoCompleteTextView=binding.listOfLocation
         autoCompleteTextView.setAdapter(adapter)
@@ -28,7 +27,7 @@ class chooselocationActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("selected_location", selectedLocation)
             startActivity(intent)
-            finish() // This ensures that `ChooselocationActivity` doesn’t stay in the background.
+            finish() 
         }
 
     }
